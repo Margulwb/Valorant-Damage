@@ -17,9 +17,10 @@
 }
 body{
     box-sizing: inherit;
-    margin: 1em;
+    margin: 5vw;
+    font-size: 16px;
     background: rgb(0,0,0);
-background: linear-gradient(145deg, rgba(0,0,0,1) 10%, rgba(129,0,0,1) 40%, rgba(255,0,0,1) 78%, rgba(255,49,49,1) 99%);
+    background: linear-gradient(145deg, rgba(0,0,0,1) 10%, rgba(129,0,0,1) 40%, rgba(255,0,0,1) 78%, rgba(255,49,49,1) 99%);
 }
 .cointainer{
     border: 3px solid #000;
@@ -33,66 +34,47 @@ background: linear-gradient(145deg, rgba(0,0,0,1) 10%, rgba(129,0,0,1) 40%, rgba
     padding-top: .2em;
     padding-bottom: .2em;
     margin-top: .2em;
-    height: 95vh;
+    height: 90vh;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 10fr ;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 1fr 5fr ;
     grid-template-areas:"label label"
                         "human menu";
 }
 .label{
     font-family: "label";
     grid-area: label;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.3em;
+    font-size: 1.4em;
     margin-left: 1em;
 }
 .human{
     grid-area: human;
-    width: 10em;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 4fr 4fr ;
+    grid-template-rows: 1fr 1fr 1fr ;
     grid-template-areas:"head"
                         "body"
                         "leg";
-}
-.human-el{
-    scale: .4;
-    display: flex;
-    justify-content: center;
+    margin-left: .5em;
 }
 .human-head{
     background-image: url("head.png");
     background-repeat: no-repeat;
-    grid-area:head;
-    background-size: contain;
-    scale: .8;
 }
 .human-body{
     background-image: url("body.png");
     background-repeat: no-repeat;
-    grid-area:body;
-    background-size: contain;
-    scale: .8;
-    display: flex;
+    margin-top: -1.5em;
 }
 .human-leg{
     background-image: url("legs.png");
     background-repeat: no-repeat;
-    grid-area:leg;
-    background-size: contain;
-    scale: .8;
-    display: flex;
+    margin-top: -2em;
 }
 .label-human{
-    display: flex;
-    justify-content: start;
-    align-items: start;
     color: black;
-    font-size: 3.8em;
+    font-size: 2em;
+    margin-left: 1em;
 }
 .label-head{
     text-shadow: var(--shadow-human);
@@ -106,18 +88,14 @@ background: linear-gradient(145deg, rgba(0,0,0,1) 10%, rgba(129,0,0,1) 40%, rgba
     text-shadow: var(--shadow-human);
     color: #fff;
 }
-.label-head , .label-body , .label-leg {
-    transition: all 1s linear;
+.strong-valorant{
+    font-size: 1.2em;
 }
+/*==============menu==============*/
 .form{
     grid-area: menu;
-    display: flex;
-    justify-content: center;
     margin-top: 1em;
-    font-size: 1em;
 }
-
-/*==============menu==============*/
 ol{
     list-style-type:none ;
     padding: 0;
@@ -126,11 +104,35 @@ ol{
     height: 2em;
     line-height: 3em;
     text-align: center;
+    display: grid;
+    grid-template-areas:"one two three"
+                        "four five six";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; 
+    grid-row-gap: .5em;
+}
+.li-pistol {
+    grid-area: one;
+}
+.li-pm{
+    grid-area: two;
+}
+.li-rifle{
+    grid-area: three;
+} 
+.li-sniper{
+    grid-area: four;
+}  
+.li-schothun{
+    grid-area: five;
+}  
+.li-heavy{
+    grid-area: six;
 }
 ol > li {
-    float: left;
     background-color: #1a53ff;
     color:#fff;
+    font-size: .9em;
 }
 ol > li > ul{
     list-style-type:none ;
@@ -140,7 +142,7 @@ ol > li > ul{
 ol > li{
     float: left;
     background-color:#FDD700;
-    width:6em;
+    width:15vw;
     margin-left:1px;
     transition: all .35s linear;
     -webkit-transition: all .35s linear;
@@ -170,7 +172,7 @@ ol > a {
     display: block;
     color: #000;
     text-decoration: none;
-    padding: 0 .4em;
+    padding:.4em;
 }
 ol > li > a:hover{
     color: #fff;
@@ -185,209 +187,16 @@ ol > li:hover > ul {
     display:block;
 }
 /*============RWD============*/
-@media(min-width:700px){
+@media(min-width:768px){
     body{
-        margin: 1em;
-        background: rgb(0,0,0);
-        background: linear-gradient(145deg, rgba(0,0,0,1) 10%, rgba(129,0,0,1) 40%, rgba(255,0,0,1) 78%, rgba(255,49,49,1) 99%);
+        font-size: 1.5em;
     }
-    .cointainer{
-        border: 3px solid #000;
-        border-radius: 5em;
-        background-color: #fff;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 10fr ;
-        grid-template-areas:"label label"
-                            "human menu";
-        -webkit-border-radius: 5em;
-        -moz-border-radius: 5em;
-        -ms-border-radius: 5em;
-        -o-border-radius: 5em;
-    }
-    .label{
-        font-size: 2.2em;
-    }
-    .human{
-        grid-area: human;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 2fr 4fr 4fr ;
-        grid-template-areas:"head"
-                            "body"
-                            "leg";
-    }
-    .human-head{
-        background-image: url("head.png");
-        background-repeat: no-repeat;
-    }
-    .human-body{
-        background-image: url("body.png");
-        background-repeat: no-repeat;
-    }
-    .human-leg{
-        background-image: url("legs.png");
-        background-repeat: no-repeat;
-    }
-    .label-head{
-        text-shadow: var(--shadow-human);
-        color: #fff;
-    }
-    .label-body{
-        text-shadow: var(--shadow-human);
-        color: #fff;
-    }
-    .label-leg{
-        text-shadow: var(--shadow-human);
-        color: #fff;
-    }
-    ol{
-        font-size: 1.2em;
-        height: 2em;
-        line-height: 2em;
-        text-align: center;
-    }
-    ol > li > ul{
-        padding: 0;
-        margin: 0;
-    }
-    ol > li{
-        width:5em;
-        height: 2.5em;
-        margin-left:1px;
-    }
-    ol > li:first-child{
-        margin-left: 0;
-    }
-    ol > li > ul > li > a {
-        border-top:1px solid #FFF;
-    }
-      ol > li > ul > li {
-        width:10em;
-    }
-    ol > a {
-        padding: 0 .4em;
-    }
-    ol > li > ul {
-        display:none;
-    }
-    ol > li:hover > ul {
-        display:block;
-    }
-    ol >li:hover li {
-        opacity: .9;
-    }
+   
    
 }
 @media(min-width:1025px){
 body{
-    margin: 0 12em;
-    background: rgb(0,0,0);
-    background: linear-gradient(145deg, rgba(0,0,0,.85) 10%, rgba(129,0,0,.85) 40%, rgba(255,0,0,.85) 78%, rgba(255,49,49,.85) 99%);
+    font-size: 2em;
+    margin: 1em 5em;
 }
-.cointainer{
-    background-color: #fff;
-    border: 3px solid #000;
-    border-radius: 1em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    margin-top: 1em;
-    width: 100%;
-    height: 95vh;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 8fr 1fr;
-    grid-template-areas:"label label"
-                        "human menu";
-    -webkit-border-radius: 1em;
-    -moz-border-radius: 1em;
-    -ms-border-radius: 1em;
-    -o-border-radius: 1em;
-}
-.form{
-    grid-area: menu;
-    display: flex;
-    justify-content: center;
-    margin-top: 2em;
-    font-size: 1.2em;
-}
-.label{
-    font-family: "label";
-    grid-area: label;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.2em;
-}
-.human{
-    grid-area: human;
-    width: 20em;
-}
-.human-head{
-    background-image: url("head.png");
-    background-repeat: no-repeat;
-}
-.human-body{
-    background-image: url("body.png");
-    background-repeat: no-repeat;
-}
-.human-leg{
-    background-image: url("legs.png");
-    background-repeat: no-repeat;
-}
-.human-head >.label-head{
-    text-shadow: var(--shadow-human);
-    color: #fff;
-}
-.human-body >.label-body{
-    text-shadow: var(--shadow-human);
-    color: #fff;
-}
-.human-leg >.label-leg{
-    text-shadow: var(--shadow-human);
-    color: #fff;
-    
-}
-ol{
-    font-size: 1.2em;
-    height: 2em;
-    line-height: 2em;
-    text-align: center;
-    margin-right:3em ;
-}
-ol > li {
-    width: 2em;
-}
-ol >li:hover li {
-    opacity: .9;
-}
-ol > li > ul{
-    padding: 0;
-    margin: 0;
-    display:none;
-}
-ol > li{
-    width:4em;
-    height: 3em;
-    margin-left:1px;
-}
-ol > li:first-child{
-    margin-left: 0;
-}
-ol > li > ul > li > a {
-    border-top:1px solid #FFF;
-}
-  ol > li > ul > li {
-    width:10em;
-}
-ol > a {
-    padding: 0 .4em;
-}
-ol > li > ul {
-    display:none;
-}
-ol > li:hover > ul {
-    display:block;
-}
-
 }
