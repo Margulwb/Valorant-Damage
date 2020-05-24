@@ -70,10 +70,6 @@ background: linear-gradient(145deg, rgba(0,0,0,1) 10%, rgba(129,0,0,1) 40%, rgba
     grid-area:head;
     background-size: contain;
     scale: .8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 2em;
 }
 .human-body{
     background-image: url("body.png");
@@ -82,8 +78,6 @@ background: linear-gradient(145deg, rgba(0,0,0,1) 10%, rgba(129,0,0,1) 40%, rgba
     background-size: contain;
     scale: .8;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .human-leg{
     background-image: url("legs.png");
@@ -92,9 +86,6 @@ background: linear-gradient(145deg, rgba(0,0,0,1) 10%, rgba(129,0,0,1) 40%, rgba
     background-size: contain;
     scale: .8;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 2em;
 }
 .label-human{
     display: flex;
