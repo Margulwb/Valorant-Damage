@@ -31,9 +31,10 @@ body{
     height: 90vh;
     display: grid;
     grid-template-columns: 1.2fr 1fr;
-    grid-template-rows: 1fr 5fr ;
+    grid-template-rows: 1fr 3fr 2fr;
     grid-template-areas:"label label"
-                        "human menu";
+                        "human menu"
+                        "human score";
 }
 .label{
     font-family: "label";
@@ -41,6 +42,23 @@ body{
     font-size: 1.4em;
     margin-left: 1em;
     color: #fff;
+}
+.score{
+    grid-area: score;
+    background-color: rgb(250, 223, 71);
+    border-radius: 20%;
+    border: 2px solid #fff;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    -ms-border-radius: 20%;
+    -o-border-radius: 20%;
+    text-shadow: var(--shadow-human);
+    color: #fff;
+    font-size: 1.5em;
 }
 .human{
     grid-area: human;
@@ -54,8 +72,9 @@ body{
 .human-head{
     background-image: url("head.png");
     background-repeat: no-repeat;
-    scale: .65;
+    scale: .6;
     margin-left: -1.5em;
+    margin-bottom: -2.5em;
 }
 .human-body{
     background-image: url("body.png");
@@ -66,30 +85,29 @@ body{
     background-image: url("leg.png");
     background-repeat: no-repeat;
     margin-left: 1.5vw;
-    margin-top:-2.5em;
     scale: .8;
 }
 .label-human{
     color: black;
-    font-size: 2.8em;
+    font-size: 1.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .label-head{
     text-shadow: var(--shadow-human);
     color: #fff;
-    margin-left: 1.5em;
 }
 .label-body{
     text-shadow: var(--shadow-human);
     color: #fff;
-    margin-left: 1em;
 }
 .label-leg{
     text-shadow: var(--shadow-human);
     color: #fff;
-    margin-left: .8em;
 }
 .strong-valorant{
-    font-size: 1.2em;
+    font-size: 2em;
 }
 /*==============menu==============*/
 .form{
@@ -110,6 +128,11 @@ ol > li {
     background-color: #1a53ff;
     color:#fff;
     font-size: .9em;
+    border-radius: .5em;
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    -ms-border-radius: .5em;
+    -o-border-radius: .5em;
 }
 ol > li > ul{
     list-style-type:none ;
@@ -171,8 +194,9 @@ ol > li:hover > ul {
     margin-left: 0;
    }
    .human-body{
-        margin-left: 3em;
+        margin-left: 4em;
         scale: 1.3;
+        font-size: .7em;
    }
    .human-leg{
        margin-left: 2em;
@@ -180,20 +204,36 @@ ol > li:hover > ul {
        scale: 1;
    }
    .label-human{
-       font-size: 2.4em;
+       font-size: 2em;
+       justify-content: end;
+    align-items: center;
    }
-   .label-head{
-        margin-left: 1.2em;
-    }
-    .label-body{
-        margin-left: 1em;
-        font-size: 1.8em;
-    }
-    .label-leg{
-        margin-left: .7em;
-        font-size: 2em;
-    }
    
+}
+@media(min-width:1000px){
+    body{
+        font-size: 1.75em;
+    }
+    .human-head{
+        scale: 1.2;
+        margin-left: 2em;
+        margin-bottom: 5em;
+       }
+       .human-body{
+            margin-left: 7.2em;
+            scale: 1.7;
+            font-size: .7em;
+            margin-bottom: 5em;
+       }
+       .human-leg{
+           margin-left: 4.7em;
+           margin-top: -3em;
+           scale: 1.6;
+           margin-bottom: 5em;
+       }
+       .label-human{
+        font-size: 1.5em;
+       }
 }
 @media(min-width:1025px){
     body{
@@ -201,18 +241,21 @@ ol > li:hover > ul {
         margin: 1em 5em;
     }
     .human-head{
-        scale: .9;
+        scale: 1;
         margin-left: 0;
+        margin-bottom: -1em;
     }
     .human-body{
-        margin-left: 4.5em;
-        scale: 1.3;
-        margin-top: .5em;
+        margin-left: 7.2em;
+        margin-top: 2em;
+        margin-bottom: 0;
+        scale: 1.5;
     }
     .human-leg{
-       margin-left: 2.2em;
-       margin-top: -1em;
-       scale: 1;
+       margin-left: 3.1em;
+       scale: 1.2;
+       margin-top: 1em;
+       margin-bottom: 0;
    }
     .label-head{
         margin-top: .5em;
