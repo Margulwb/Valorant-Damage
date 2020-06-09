@@ -31,7 +31,7 @@ body{
     height: 90vh;
     display: grid;
     grid-template-columns: 1.2fr 1fr;
-    grid-template-rows: 1fr 3fr 2fr;
+    grid-template-rows: 1fr 3fr 1fr;
     grid-template-areas:"label label"
                         "human menu"
                         "human score";
@@ -57,7 +57,7 @@ body{
     -ms-border-radius: 20%;
     -o-border-radius: 20%;
     text-shadow: var(--shadow-human);
-    color: #fff;
+    color: #f3263632;
     font-size: 1.5em;
 }
 .human{
@@ -70,29 +70,26 @@ body{
                         "leg";
 }
 .human-head{
-    background-image: url("head.png");
+    background-image: url("heads.png");
     background-repeat: no-repeat;
-    scale: .6;
-    margin-left: -1.5em;
-    margin-bottom: -2.5em;
+    grid-area: head;
 }
 .human-body{
     background-image: url("body.png");
     background-repeat: no-repeat;
-    scale: .8;
+    grid-area: body;
 }
 .human-leg{
     background-image: url("leg.png");
     background-repeat: no-repeat;
-    margin-left: 1.5vw;
-    scale: .8;
+    grid-area: leg;
 }
 .label-human{
     color: black;
     font-size: 1.8em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 15vw;
+    margin-left: 10vw;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .label-head{
     text-shadow: var(--shadow-human);
@@ -189,85 +186,30 @@ ol > li:hover > ul {
     body{
         font-size: 1.5em;
     }
-   .human-head{
-    scale: .8;
-    margin-left: 0;
-   }
-   .human-body{
-        margin-left: 4em;
-        scale: 1.3;
-        font-size: .7em;
-   }
-   .human-leg{
-       margin-left: 2em;
-       margin-top: -3em;
-       scale: 1;
-   }
-   .label-human{
-       font-size: 2em;
-       justify-content: end;
-    align-items: center;
-   }
-   
+    .label-human{
+        font-size: 1.4em;
+        margin-top: 6vw;
+        margin-left: 4vw;
+    }
 }
 @media(min-width:1000px){
     body{
         font-size: 1.75em;
     }
-    .human-head{
-        scale: 1.2;
-        margin-left: 2em;
-        margin-bottom: 5em;
-       }
-       .human-body{
-            margin-left: 7.2em;
-            scale: 1.7;
-            font-size: .7em;
-            margin-bottom: 5em;
-       }
-       .human-leg{
-           margin-left: 4.7em;
-           margin-top: -3em;
-           scale: 1.6;
-           margin-bottom: 5em;
-       }
-       .label-human{
+    .label-human{
         font-size: 1.5em;
-       }
+        margin-top: 5vw;
+        margin-left: 1vw;
+    }
 }
 @media(min-width:1025px){
     body{
         font-size: 2em;
         margin: 1em 5em;
     }
-    .human-head{
-        scale: 1;
-        margin-left: 0;
-        margin-bottom: -1em;
-    }
-    .human-body{
-        margin-left: 7.2em;
-        margin-top: 2em;
-        margin-bottom: 0;
-        scale: 1.5;
-    }
-    .human-leg{
-       margin-left: 3.1em;
-       scale: 1.2;
-       margin-top: 1em;
-       margin-bottom: 0;
-   }
-    .label-head{
-        margin-top: .5em;
-        margin-left: 1.5em;
-        font-size: .85em;
-    }
-    .label-body{
-        margin-left: 1.5em;
-        font-size: .65em;
-    }
-    .label-leg{
-        margin-left: .7em;
-        font-size: .8em;
+    .label-human{
+        font-size: 1.2em;
+        margin-top: 3vw;
+        margin-left: 1vw;
     }
 }
